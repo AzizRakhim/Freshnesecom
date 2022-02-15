@@ -1,17 +1,756 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Freshnesecom</title>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="css/col.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    
+
+    <header class="site-header header">
+        <div class="container">
+            <div class="header__top top row">
+                <div class="top__chat col-10 col-md-8 col-lg-6">
+                    <ul class="nav justify-content-start">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Chat with us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">+420 336 775 664</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">info@freshnesecom.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="top__nav col-2 col-md-4 col-lg-6 d-flex align-items-center justify-content-end">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Careers</a>
+                        </li>
+                    </ul>
+                    <button class="btn btn-primary c-btn" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        <i class='bx bx-menu'></i>
+                    </button>
+
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                        aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <h5 id="offcanvasRightLabel">
+                                <ul class="off__list d-flex m-0 align-items-center">
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="#">Blog</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">About Us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Careers</a>
+                                    </li>
+                                </ul>
+                            </h5>
+                            <button type="button" class="btn-close text-reset x" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="category__list ff p-0">
+                                <li class="category__item">
+                                    <a class="category__link fff" href="#">Bakery</a>
+                                </li>
+                                <li class="category__item">
+                                    <a class="category__link fff" href="#">Fruit and vegetables</a>
+                                </li>
+                                <li class="category__item">
+                                    <a class="category__link fff" href="#">Meat and fish</a>
+                                </li>
+                                <li class="category__item">
+                                    <a class="category__link fff" href="#">Drinks</a>
+                                </li>
+                                <li class="category__item">
+                                    <a class="category__link fff" href="#">Kitchen</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom bottom row align-items-center justify-content-between">
+                <div class="bottom__logo-box">
+                    <a class="bottom__logo-link" href="#">
+                        <img src="images/logo.svg" alt="site logo">
+                    </a>
+                </div>
+                <div class="bottom__form row align-items-center" id="searchBox">
+                    <div class="dropdown col-4 col-md-5 col-lg-4 p-0">
+                        <button class="btn btn-secondary dropdown-toggle p-0 d-flex align-items-center category-btn"
+                            type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            All categories
+                            <i class='bx bx-chevron-down'></i>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Categories 2</a></li>
+                            <li><a class="dropdown-item" href="#">Categories 3</a></li>
+                            <li><a class="dropdown-item" href="#">Categories 4</a></li>
+                        </ul>
+                    </div>
+                    <nav class="navbar navbar-light bg-light col-8 col-md-7 col-lg-8 p-0 m-0">
+                        <div class="container-fluid p-0">
+                            <form class="d-flex justify-content-between w-100">
+                                <input class="form-control me-2 p-0" type="search"
+                                    placeholder="Search Products, categories ..." aria-label="Search">
+                                <button class="btn btn-outline-success search-btn p-0" type="submit">
+                                    <i class='bx bx-search'></i>
+                                </button>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+                <div class="bottom__offcanvas b-offcanvas">
+                    <ul class="b-offcanvas__list p-0 m-0 d-flex justify-content-end">
+                        <li class="b-offcanvas__item hidden" id="searchBtn">
+                            <i class='bx bx-search'></i>
+                        </li>
+                        <li class="b-offcanvas__item">
+                            <i class='bx bx-user'></i>
+                        </li>
+                        <li class="b-offcanvas__item">
+                            <i class='bx bx-basket'></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-intro">
+            <div class="btn-group d-flex flex-wrap">
+                <div class="container">
+                    <div class="d-flex flex-wrap">
+                        <button type="button"
+                            class="btn btn-danger dropdown-toggle hero-nav-btn d-flex align-items-center"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Bakery
+                            <i class='bx bx-chevron-down'></i>
+                        </button>
+                        <button type="button"
+                            class="btn btn-danger dropdown-toggle hero-nav-btn d-flex align-items-center"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Fruit and vegetables
+                            <i class='bx bx-chevron-down'></i>
+                        </button>
+                        <button type="button"
+                            class="btn btn-danger dropdown-toggle hero-nav-btn d-flex align-items-center"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Meat and fish
+                            <i class='bx bx-chevron-down'></i>
+                        </button>
+                        <button type="button"
+                            class="btn btn-danger dropdown-toggle hero-nav-btn d-flex align-items-center"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Drinks
+                            <i class='bx bx-chevron-down'></i>
+                        </button>
+                        <button type="button"
+                            class="btn btn-danger dropdown-toggle hero-nav-btn d-flex align-items-center"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Kitchen
+                            <i class='bx bx-chevron-down'></i>
+                        </button>
+                        <button type="button"
+                            class="btn btn-danger dropdown-toggle hero-nav-btn d-flex align-items-center"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Special nutrition
+                            <i class='bx bx-chevron-down'></i>
+                        </button>
+                        <button type="button"
+                            class="btn btn-danger dropdown-toggle hero-nav-btn d-flex align-items-center"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Baby
+                            <i class='bx bx-chevron-down'></i>
+                        </button>
+                        <button type="button"
+                            class="btn btn-danger dropdown-toggle hero-nav-btn d-flex align-items-center"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Pharmacy
+                            <i class='bx bx-chevron-down'></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HEADER END -->
+    <!-- CATEGORY START -->
+
+    <section id="category">
+        <div class="container">
+            <div class="category d-flex">
+                <div class="category__menu col-md-3 col-lg-3">
+                    <h3 class="category__title">
+                        Category menu
+                    </h3>
+                    <ul class="category__list p-0">
+                        <li class="category__item">
+                            <a class="category__link" href="#">Bakery</a>
+                        </li>
+                        <li class="category__item">
+                            <a class="category__link" href="#">Fruit and vegetables</a>
+                        </li>
+                        <li class="category__item">
+                            <a class="category__link" href="#">Meat and fish</a>
+                        </li>
+                        <li class="category__item">
+                            <a class="category__link" href="#">Drinks</a>
+                        </li>
+                        <li class="category__item">
+                            <a class="category__link" href="#">Kitchen</a>
+                        </li>
+                    </ul>
+                    <div class="btn-box">
+                        <button class="btn btn-light category__btn d-flex align-items-center">
+                            More categories
+                            <i class='bx bx-chevron-right'></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="category__card c-card col-12 col-lg-9 d-flex">
+                    <div class="c-card__wrapper col-6 col-lg-6">
+                        <div class="c-card__box">
+                            <span class="c-card__entry">
+                                Banner subfocus
+                            </span>
+                            <h3 class="c-card__title">
+                                Space for heading
+                            </h3>
+                            <div class="c-card__btn-box">
+                                <button type="button"
+                                    class="btn btn-outline-success c-card__btn d-flex align-items-center">
+                                    Read recepies
+                                    <i class='bx bx-chevron-right'></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-card__wrapper col-6 col-lg-6">
+                        <div class="c-card__box">
+                            <span class="c-card__entry">
+                                Banner subfocus
+                            </span>
+                            <h3 class="c-card__title">
+                                Space for heading
+                            </h3>
+                            <div class="c-card__btn-box">
+                                <button type="button"
+                                    class="btn btn-outline-success c-card__btn d-flex align-items-center">
+                                    Read recepies
+                                    <i class='bx bx-chevron-right'></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="category">
+        <div class="container">
+            <div class="category d-flex">
+                <div class="category__menu col-md-3 col-lg-3">
+                    <h3 class="category__title">
+                        Best selling products
+                    </h3>
+                    <ul class="category__list p-0">
+                        <li class="category__item">
+                            <a class="category__link" href="#">Kitchen</a>
+                        </li>
+                        <li class="category__item">
+                            <a class="category__link" href="#">Meat and fish</a>
+                        </li>
+                        <li class="category__item">
+                            <a class="category__link" href="#">Special nutrition</a>
+                        </li>
+                        <li class="category__item">
+                            <a class="category__link" href="#">Pharmacy</a>
+                        </li>
+                        <li class="category__item">
+                            <a class="category__link" href="#">Baby</a>
+                        </li>
+                    </ul>
+                    <div class="btn-box">
+                        <button class="btn btn-light category__btn d-flex align-items-center">
+                            More products
+                            <i class='bx bx-chevron-right'></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="category__card c-card col-12 col-lg-9 d-flex flex-wrap">
+                    <div class="c-card__wrapper min col-6 col-md-4 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="real-wrapper">
+                                    <img src="https://picsum.photos/237/180" class="card-img-top" alt="card">
+                                </div>
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <div class="num-wrapper d-flex align-items-center justify-content-between">
+                                    <span class="card-dollar">
+                                        1.48 USD
+                                    </span>
+                                    <a href="#" class="btn btn-success buy-btn">Buy now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-card__wrapper chan col-6 col-md-4 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="real-wrapper">
+                                    <img src="https://picsum.photos/237/180" class="card-img-top" alt="card">
+                                </div>
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <div class="num-wrapper d-flex align-items-center justify-content-between">
+                                    <span class="card-dollar">
+                                        1.48 USD
+                                    </span>
+                                    <a href="#" class="btn btn-success buy-btn">Buy now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-card__wrapper min col-6 col-md-4 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="real-wrapper">
+                                    <img src="https://picsum.photos/237/180" class="card-img-top" alt="card">
+                                </div>
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <div class="num-wrapper d-flex align-items-center justify-content-between">
+                                    <span class="card-dollar">
+                                        1.48 USD
+                                    </span>
+                                    <a href="#" class="btn btn-success buy-btn">Buy now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="category">
+        <div class="container">
+            <div class="category d-flex">
+                <div class="category__menu col-md-3 col-lg-3">
+                    <h3 class="category__title">
+                        Best selling products
+                    </h3>
+                    <ul class="category__list p-0">
+                        <li class="category__item">
+                            <a class="category__link" href="#">Kitchen</a>
+                        </li>
+                        <li class="category__item">
+                            <a class="category__link" href="#">Meat and fish</a>
+                        </li>
+                        <li class="category__item">
+                            <a class="category__link" href="#">Special nutrition</a>
+                        </li>
+                        <li class="category__item">
+                            <a class="category__link" href="#">Pharmacy</a>
+                        </li>
+                        <li class="category__item">
+                            <a class="category__link" href="#">Baby</a>
+                        </li>
+                    </ul>
+                    <div class="btn-box">
+                        <button class="btn btn-light category__btn d-flex align-items-center">
+                            More products
+                            <i class='bx bx-chevron-right'></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="category__card c-card col-12 col-lg-9 d-flex flex-wrap">
+                    <div class="c-card__wrapper col-6 col-md-4 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="real-wrapper">
+                                    <img src="https://picsum.photos/237/180" class="card-img-top" alt="card">
+
+                                </div>
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <div class="num-wrapper d-flex align-items-center justify-content-between">
+                                    <span class="card-dollar">
+                                        1.48 USD
+                                    </span>
+                                    <a href="#" class="btn btn-success buy-btn">Buy now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-card__wrapper col-6 col-md-4 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="real-wrapper">
+                                    <img src="https://picsum.photos/237/180" class="card-img-top" alt="card">
+
+                                </div>
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <div class="num-wrapper d-flex align-items-center justify-content-between">
+                                    <span class="card-dollar">
+                                        1.48 USD
+                                    </span>
+                                    <a href="#" class="btn btn-success buy-btn">Buy now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-card__wrapper col-6 col-md-4 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="real-wrapper">
+                                    <img src="https://picsum.photos/237/180" class="card-img-top" alt="card">
+
+                                </div>
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <div class="num-wrapper d-flex align-items-center justify-content-between">
+                                    <span class="card-dollar">
+                                        1.48 USD
+                                    </span>
+                                    <a href="#" class="btn btn-success buy-btn">Buy now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="category">
+        <div class="container">
+            <div class="category__intro d-flex align-items-center justify-content-between">
+                <div class="category__headline">
+                    Section Headline
+                </div>
+                <div class="category__intro-box">
+                    <button class="btn btn-outline-dark ccc-btn d-flex align-items-center">
+                        Button
+                        <i class='bx bx-chevron-right'></i>
+                    </button>
+                </div>
+            </div>
+            <div class="category d-flex">
+                <div class="category__card c-card col-12 d-flex flex-wrap">
+                    <div class="c-card__wrapper col-6 col-md-6 col-lg-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="real-wrapper">
+                                    <img src="https://picsum.photos/237/180" class="card-img-top" alt="card">
+
+                                </div>
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <div class="num-wrapper d-flex align-items-center justify-content-between">
+                                    <span class="card-dollar">
+                                        1.48 USD
+                                    </span>
+                                    <a href="#" class="btn btn-success buy-btn">Buy now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-card__wrapper col-6 col-md-6 col-lg-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="real-wrapper">
+                                    <img src="https://picsum.photos/237/180" class="card-img-top" alt="card">
+
+                                </div>
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <div class="num-wrapper d-flex align-items-center justify-content-between">
+                                    <span class="card-dollar">
+                                        1.48 USD
+                                    </span>
+                                    <a href="#" class="btn btn-success buy-btn">Buy now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-card__wrapper col-6 col-md-6 col-lg-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="real-wrapper">
+                                    <img src="https://picsum.photos/237/180" class="card-img-top" alt="card">
+
+                                </div>
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <div class="num-wrapper d-flex align-items-center justify-content-between">
+                                    <span class="card-dollar">
+                                        1.48 USD
+                                    </span>
+                                    <a href="#" class="btn btn-success buy-btn">Buy now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-card__wrapper col-6 col-md-6 col-lg-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="real-wrapper">
+                                    <img src="https://picsum.photos/237/180" class="card-img-top" alt="card">
+
+                                </div>
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <div class="num-wrapper d-flex align-items-center justify-content-between">
+                                    <span class="card-dollar">
+                                        1.48 USD
+                                    </span>
+                                    <a href="#" class="btn btn-success buy-btn">Buy now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORY END -->
+    <!-- BLOG START -->
+
+    <section id="blog">
+        <div class="container">
+            <div class="blog">
+                <div class="category__intro d-flex align-items-center justify-content-between">
+                    <div class="category__headline">
+                        Read our Blog posts
+                    </div>
+                    <div class="category__intro-box">
+                        <button class="btn btn-outline-dark ccc-btn d-flex align-items-center">
+                            Go to Blog
+                            <i class='bx bx-chevron-right'></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="blog__content d-flex">
+                    <div class="blog__main col-12 col-md-6 col-lg-5">
+                        <div class="b-wrapper">
+                            <img src="images/food.png" alt="food">
+                            <div class="b-main__content">
+                                <span class="b-main__entry">
+                                    Dinner tips
+                                </span>
+                                <div class="b-main__desc">
+                                    <h3 class="b-main__title">
+                                        Our chef tips for a great and tasty dinner ready in 20 minutes
+                                    </h3>
+                                    <div class="b-main__img">
+                                        <span class="b-main__img-holder">
+                                            <img src="images/man.png" alt="man">
+                                        </span>
+                                        <span class="blog__time">
+                                            17. 6. 2020
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog__secondary col-lg-3">
+                        <div class="small-img">
+                            <img src="images/small-food.png" alt="food">
+                        </div>
+                        <span class="b-main__entry b-vegentable">
+                            Vegetable
+                        </span>
+                        <h3 class="blog__title">
+                            Which vegetable your family will love and want’s eat each day
+                        </h3>
+                        <span class="blog__year">
+                            Author 15. 6. 2020
+                        </span>
+                    </div>
+                    <div class="blog__pile col-12 col-md-6 col-lg-4">
+                        <ul class="blog__list p-0 m-0">
+                            <li class="blog__item d-flex align-items-center justify-content-between">
+                                <div class="blog__item-content">
+                                    <h4 class="blog__item-title">
+                                        Salat is kinda good start to your morning routines
+                                    </h4>
+                                    <span class="blog__year">
+                                        Author 14.1.2020
+                                    </span>
+                                </div>
+                                <div class="blog__item-img-box">
+                                    <img src="images/list-food.png" alt="food">
+                                </div>
+                            </li>
+                            <li class="blog__item d-flex align-items-center justify-content-between">
+                                <div class="blog__item-content">
+                                    <h4 class="blog__item-title">
+                                        Salat is kinda good start to your morning routines
+                                    </h4>
+                                    <span class="blog__year">
+                                        Author 14.1.2020
+                                    </span>
+                                </div>
+                                <div class="blog__item-img-box">
+                                    <img src="images/list-food.png" alt="food">
+                                </div>
+                            </li>
+                            <li class="blog__item d-flex align-items-center justify-content-between">
+                                <div class="blog__item-content">
+                                    <h4 class="blog__item-title">
+                                        Salat is kinda good start to your morning routines
+                                    </h4>
+                                    <span class="blog__year">
+                                        Author 14.1.2020
+                                    </span>
+                                </div>
+                                <div class="blog__item-img-box">
+                                    <img src="images/list-food.png" alt="food">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG END -->
+    <!-- NAV-LIST START -->
+
+    <section id="nav-list">
+        <div class="container">
+            <div class="nav-list d-flex flex-wrap">
+                <div class="nav-list__wrapper col-6 col-md-3 col-lg-3">
+                    <h3 class="nav-list__title">
+                        Get in touch
+                    </h3>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Active</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-list__wrapper col-6 col-md-3 col-lg-3">
+                    <h3 class="nav-list__title">
+                        Get in touch
+                    </h3>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Active</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-list__wrapper col-6 col-md-3 col-lg-3">
+                    <h3 class="nav-list__title">
+                        Get in touch
+                    </h3>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Active</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-list__wrapper col-6 col-md-3 col-lg-3">
+                    <h3 class="nav-list__title">
+                        Get in touch
+                    </h3>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Active</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
     <script src="js/main.js"></script>
 </body>
+
 </html>
