@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freshnesecom</title>
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="site-header header">
+    <div class="container">
+      <div class="header__top top row d-flex align-items-center">
+        <div class="top__chat col-10 col-md-8 col-lg-6">
+          <ul class="nav justify-content-start m-0">
+            <li class="nav-item mb-0">
+              <a class="nav-link active" aria-current="page" href="#">Chat with us</a>
+            </li>
+            <li class="nav-item mb-0">
+              <a class="nav-link p-phone" href="#">+420 336 775 664</a>
+            </li>
+            <li class="nav-item d-email mb-0">
+              <a class="nav-link" href="#">info@freshnesecom.com</a>
+            </li>
+          </ul>
+        </div>
+        <div class="top__nav col-2 col-md-4 col-lg-6 d-flex align-items-center justify-content-end">
+          <ul class="nav justify-content-end m-0">
+            <li class="nav-item mb-0">
+              <a class="nav-link" aria-current="page" href="#">Blog</a>
+            </li>
+            <li class="nav-item mb-0">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item m-0">
+              <a class="nav-link" href="#">Careers</a>
+            </li>
+          </ul>
+          <button class="btn btn-primary c-btn d-flex align-items-center" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <i class='bx bx-menu'></i>
+          </button>
+
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+              <h5 id="offcanvasRightLabel">
+                <ul class="off__list d-flex m-0 align-items-center">
+                  <li class="nav-item mb-0">
+                    <a class="nav-link" aria-current="page" href="#">Blog</a>
+                  </li>
+                  <li class="nav-item mb-0">
+                    <a class="nav-link" href="#">About Us</a>
+                  </li>
+                  <li class="nav-item mb-0">
+                    <a class="nav-link" href="#">Careers</a>
+                  </li>
+                </ul>
+              </h5>
+              <button type="button" class="btn-close text-reset x" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="category__list ff p-0">
+                <li class="category__item">
+                  <a class="category__link fff" href="#">Bakery</a>
+                </li>
+                <li class="category__item">
+                  <a class="category__link fff" href="#">Fruit and vegetables</a>
+                </li>
+                <li class="category__item">
+                  <a class="category__link fff" href="#">Meat and fish</a>
+                </li>
+                <li class="category__item">
+                  <a class="category__link fff" href="#">Drinks</a>
+                </li>
+                <li class="category__item">
+                  <a class="category__link fff" href="#">Kitchen</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-bottom bottom row align-items-center justify-content-between">
+        <div class="bottom__logo-box">
+          <a class="bottom__logo-link" href="#">
+            <img src="images/logo.svg" alt="site logo">
+          </a>
+        </div>
+        <div class="bottom__form row align-items-center" id="searchBox">
+          <div class="dropdown col-4 col-md-5 col-lg-4 p-0">
+            <button class="btn btn-secondary dropdown-toggle p-0 d-flex align-items-center category-btn" type="button"
+              id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              All categories
+              <i class='bx bx-chevron-down'></i>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">Categories 2</a></li>
+              <li><a class="dropdown-item" href="#">Categories 3</a></li>
+              <li><a class="dropdown-item" href="#">Categories 4</a></li>
+            </ul>
+          </div>
+          <nav class="navbar navbar-light bg-light col-8 col-md-7 col-lg-8 p-0 m-0">
+            <div class="container-fluid p-0">
+              <form class="d-flex justify-content-between w-100">
+                <input class="form-control me-2 p-0" type="search" placeholder="Search Products, categories ..."
+                  aria-label="Search">
+                <button class="btn btn-outline-success search-btn p-0" type="submit">
+                  <i class='bx bx-search'></i>
+                </button>
+              </form>
+            </div>
+          </nav>
+        </div>
+        <div class="bottom__offcanvas b-offcanvas">
+          <ul class="b-offcanvas__list p-0 m-0 d-flex justify-content-end">
+            <li class="b-offcanvas__item hidden" id="searchBtn">
+              <i class='bx bx-search'></i>
+            </li>
+            <li class="b-offcanvas__item">
+              <i class='bx bx-user'></i>
+            </li>
+            <li class="b-offcanvas__item position-relative">
+              <i class='bx bx-basket'></i>
+              <span class="position-absolute top-100 start-0 translate-middle badge rounded-pill bg-danger smth">
+                <span>
+                  4
+                </span>
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-intro">
+      <div class="btn-group d-flex flex-wrap">
+        <div class="container">
+          <div class="d-flex flex-wrap">
+            <button type="button" class="btn btn-danger dropdown-toggle hero-nav-btn d-flex align-items-center"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Bakery
+              <i class='bx bx-chevron-down'></i>
+            </button>
+            <button type="button" class="btn btn-danger dropdown-toggle hero-nav-btn d-flex align-items-center"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Fruit and vegetables
+              <i class='bx bx-chevron-down'></i>
+            </button>
+            <button type="button" class="btn btn-danger dropdown-toggle hero-nav-btn d-flex align-items-center"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Meat and fish
+              <i class='bx bx-chevron-down'></i>
+            </button>
+            <button type="button" class="btn btn-danger dropdown-toggle hero-nav-btn d-flex align-items-center"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Drinks
+              <i class='bx bx-chevron-down'></i>
+            </button>
+            <button type="button" class="btn btn-danger dropdown-toggle hero-nav-btn d-flex align-items-center"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Kitchen
+              <i class='bx bx-chevron-down'></i>
+            </button>
+            <button type="button" class="btn btn-danger dropdown-toggle hero-nav-btn d-flex align-items-center"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Special nutrition
+              <i class='bx bx-chevron-down'></i>
+            </button>
+            <button type="button" class="btn btn-danger dropdown-toggle hero-nav-btn d-flex align-items-center"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Baby
+              <i class='bx bx-chevron-down'></i>
+            </button>
+            <button type="button" class="btn btn-danger dropdown-toggle hero-nav-btn d-flex align-items-center"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Pharmacy
+              <i class='bx bx-chevron-down'></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container py-3">
+        <nav aria-label="breadcrum">
+          <ol class="breadcrumb d-flex align-items-center m-0">
+            <li class="breadcrumb-item"><a href="#">Homepage</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Fruit and vegetables</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- HEADER END -->
+  <!-- MAIN START -->
+
+  <main class="site-main">
+    <section id="fruit">
+      <div class="container">
+        <div class="fruit d-flex align-items-center justify-content-between">
+          <h2 class="fruit__title m-0">
+            Fruit and vegetables
+          </h2>
+          <ul class="fruit__list d-flex p-0 m-0">
+            <li class="fruit__item d-flex align-items-center active">
+              <i class='bx bx-grid-alt'></i>
+              Grid view
+            </li>
+            <li class="fruit__item d-flex align-items-center">
+              <i class='bx bx-list-ul'></i>
+              List view
+            </li>
+            <li class="fruit__item d-flex align-items-center">
+              <span class="fruit__num">
+                117
+              </span>
+              <span class="fruit__product">
+                Products
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="f-checkbox d-flex flex-wrap py-3">
+          <div>
+            <div class="radio-btn-box">
+              <input type="radio" name="radio" id="radio">
+              <label for="radio" class="f-label d-flex align-items-center">
+                Filtre text
+              </label>
+              <input type="radio" name="radio" id="radio-two" checked>
+              <label for="radio-two" class="f-label d-flex align-items-center">
+                Filtre text
+              </label>
+            </div>
+          </div>
+          <div class="input-group w-stratch">
+            <div class="input-group-text check-intro">
+              <input class="form-check-input check-f" type="checkbox" value=""
+                aria-label="Checkbox for following text input">
+              <span class="check-filtre">
+                Filtre
+              </span>
+              <span class="nbm">
+                Nbm
+              </span>
+            </div>
+          </div>
+          <div class="input-group w-stratch">
+            <div class="input-group-text check-intro">
+              <input class="form-check-input check-f" type="checkbox" value=""
+                aria-label="Checkbox for following text input">
+              <span class="check-filtre">
+                Filtre
+              </span>
+              <span class="nbm">
+                Nbm
+              </span>
+            </div>
+          </div>
+          <div class="input-group w-stratch">
+            <div class="input-group-text check-intro">
+              <input class="form-check-input check-f" type="checkbox" value=""
+                aria-label="Checkbox for following text input" checked>
+              <span class="check-filtre">
+                Filtre
+              </span>
+              <span class="nbm">
+                12
+              </span>
+            </div>
+            <select class="form-select c-s" aria-label="Default select example">
+              <option selected>Select</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+        <div class="choices d-flex align-items-center">
+          <h3 class="choices__title m-0">
+            Applied filtres:
+          </h3>
+          <ul class="choices__list p-0 m-0 d-flex">
+            <li class="choices__item d-flex align-items-center">
+              Selected Filtre
+              <i class='bx bx-x'></i>
+            </li>
+            <li class="choices__item d-flex align-items-center">
+              Selected Filtre
+              <i class='bx bx-x'></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FRUIT END -->
+    <!-- F-CATEGORY START -->
+
+    <section id="f-category">
+      <div class="container">
+        <div class="f-category d-flex">
+          <div class="f-category__left f-left col-12 col-lg-3">
+            <div class="f-product col-12 col-sm-4 col-md-3 col-lg-12">
+              <h4 class="f-category__title mb-3">
+                Categories
+              </h4>
+              <ul class="f-category__list p-0 m-0">
+                <li class="f-category__item d-flex align-items-center justify-content-between">
+                  <a class="f-category__link" href="#">
+                    Category name
+                  </a>
+                  <span class="f-category__num">
+                    320
+                  </span>
+                </li>
+                <li class="f-category__item d-flex align-items-center justify-content-between">
+                  <a class="f-category__link" href="#">
+                    Category name
+                  </a>
+                  <span class="f-category__num">
+                    320
+                  </span>
+                </li>
+                <li class="f-category__item d-flex align-items-center justify-content-between">
+                  <a class="f-category__link" href="#">
+                    Category name
+                  </a>
+                  <span class="f-category__num">
+                    320
+                  </span>
+                </li>
+                <li class="f-category__item d-flex align-items-center justify-content-between">
+                  <a class="f-category__link" href="#">
+                    Category name
+                  </a>
+                  <span class="f-category__num">
+                    320
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div class="f-brand col-12 col-sm-4 col-md-3 col-lg-12">
+              <h4 class="f-category__title mb-3">
+                Brands
+              </h4>
+              <ul class="f-category__list p-0 m-0">
+                <li class="f-category__item">
+                  <div class="form-check d-flex align-items-center">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Filtre by brand item
+                    </label>
+                  </div>
+                </li>
+                <li class="f-category__item">
+                  <div class="form-check d-flex align-items-center">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault1" checked>
+                    <label class="form-check-label" for="flexCheckDefault1">
+                      Filtre by brand item
+                    </label>
+                  </div>
+                </li>
+                <li class="f-category__item">
+                  <div class="form-check d-flex align-items-center">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault2" checked>
+                    <label class="form-check-label" for="flexCheckDefault2">
+                      Filtre by brand item
+                    </label>
+                  </div>
+                </li>
+                <li class="f-category__item">
+                  <div class="form-check d-flex align-items-center">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault3">
+                    <label class="form-check-label" for="flexCheckDefault3">
+                      Filtre by brand item
+                    </label>
+                  </div>
+                </li>
+                <li class="f-category__item">
+                  <div class="form-check d-flex align-items-center">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault4">
+                    <label class="form-check-label" for="flexCheckDefault4">
+                      Filtre by brand item
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="f-stars col-12 col-sm-4 col-md-3 col-lg-12">
+              <h4 class="f-category__title mb-3">
+                Rating
+              </h4>
+              <ul class="f-category__list p-0 m-0">
+                <li class="f-category__item">
+                  <div class="form-check d-flex align-items-center">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault5">
+                    <label class="form-check-label" for="flexCheckDefault5">
+                      <i class='bx bxs-star'></i>
+                      <i class='bx bxs-star'></i>
+                      <i class='bx bxs-star'></i>
+                      <i class='bx bxs-star'></i>
+                      <i class='bx bxs-star'></i>
+                    </label>
+                  </div>
+                </li>
+                <li class="f-category__item">
+                  <div class="form-check d-flex align-items-center">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault6">
+                    <label class="form-check-label" for="flexCheckDefault6">
+                      <i class='bx bxs-star'></i>
+                      <i class='bx bxs-star'></i>
+                      <i class='bx bxs-star'></i>
+                      <i class='bx bxs-star'></i>
+                      <i class='bx bx-star'></i>
+                    </label>
+                  </div>
+                </li>
+                <li class="f-category__item">
+                  <div class="form-check d-flex align-items-center">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault7">
+                    <label class="form-check-label" for="flexCheckDefault7">
+                      <i class='bx bxs-star'></i>
+                      <i class='bx bxs-star'></i>
+                      <i class='bx bxs-star'></i>
+                      <i class='bx bx-star'></i>
+                      <i class='bx bx-star'></i>
+                    </label>
+                  </div>
+                </li>
+                <li class="f-category__item">
+                  <div class="form-check d-flex align-items-center">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault8">
+                    <label class="form-check-label" for="flexCheckDefault8">
+                      <i class='bx bxs-star'></i>
+                      <i class='bx bxs-star'></i>
+                      <i class='bx bx-star'></i>
+                      <i class='bx bx-star'></i>
+                      <i class='bx bx-star'></i>
+                    </label>
+                  </div>
+                </li>
+                <li class="f-category__item">
+                  <div class="form-check d-flex align-items-center">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label9" for="flexCheckDefault9">
+                      <i class='bx bxs-star'></i>
+                      <i class='bx bx-star'></i>
+                      <i class='bx bx-star'></i>
+                      <i class='bx bx-star'></i>
+                      <i class='bx bx-star'></i>
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="f-range col-12 col-sm-4 col-md-3 col-lg-12">
+              <h4 class="f-category__title mb-3">
+                Price
+              </h4>
+              <input type="range" class="form-range mb-3" id="customRange1">
+              <div class="calculate d-flex align-items-center">
+                <div class="min-b d-flex flex-column">
+                  <span class="min">
+                    Min
+                  </span>
+                  <span class="min-num">
+                    0
+                  </span>
+                </div>
+                <span class="hyphen">
+
+                </span>
+                <div class="min-b d-flex flex-column">
+                  <span class="min">
+                    Max
+                  </span>
+                  <span class="min-num">
+                    000
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="f-category__right f-right col-12 col-lg-9">
+            <div class="f-right__wrapper d-flex align-items-center">
+              <div class="f-right__img-box col-12 col-sm-6 col-md-4">
+                <img src="https://picsum.photos/268/280" alt="product">
+              </div>
+              <div class="f-right__content col-md-5">
+                <h3 class="f-right__title">
+                  Product title
+                </h3>
+                <p class="f-right__text">
+                  Space for a small product description
+                </p>
+                <div class="f-right__stars">
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bx-star'></i>
+                </div>
+                <div class="d-flex">
+                  <ul class="f-right__list p-0 m-0">
+                    <li class="f-right__item">
+                      <span>
+                        Fresheness
+                      </span>
+                    </li>
+                    <li class="f-right__item">
+                      <span>
+                        Farm
+                      </span>
+                    </li>
+                    <li class="f-right__item">
+                      <span>
+                        Delivery
+                      </span>
+                    </li>
+                    <li class="f-right__item">
+                      <span>
+                        Stock
+                      </span>
+                    </li>
+                  </ul>
+                  <ul class="f-right__list p-0 m-0">
+                    <li class="f-right__item">
+                      <span>
+                        <span class="f-green">New</span> (Extra fresh)
+                      </span>
+                    </li>
+                    <li class="f-right__item">
+                      <span>
+                        Grocery Tarm Fields
+                      </span>
+                    </li>
+                    <li class="f-right__item">
+                      <span>
+                        Europe
+                      </span>
+                    </li>
+                    <li class="f-right__item">
+                      <span class="f-green">
+                        320 pcs
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="f-right__price col-12 col-sm-6 col-md-3">
+                <span class="bold-text">
+                  36.99 USD
+                </span>
+                <span class="crossed-price">
+                  48.56
+                </span>
+                <span class="free-shipping">
+                  Free Shipping
+                </span>
+                <span class="f-right__day">
+                  Delivery in 1 day
+                </span>
+                <div class="f-right__btn-box d-flex flex-column">
+                  <button type="button" class="btn btn-success d-btn d-flex align-items-center">
+                    Product Detail
+                    <i class='bx bx-chevron-right'></i>
+                  </button>
+                  <button type="button" class="btn btn-light h-btn">
+                    <i class='bx bx-heart'></i>
+                    Add to wish list
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="f-right__wrapper d-flex align-items-center">
+              <div class="f-right__img-box col-12 col-sm-6 col-md-4">
+                <img src="https://picsum.photos/268/280" alt="product">
+              </div>
+              <div class="f-right__content col-md-5">
+                <h3 class="f-right__title">
+                  Product title
+                </h3>
+                <p class="f-right__text">
+                  Space for a small product description
+                </p>
+                <div class="f-right__stars">
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bx-star'></i>
+                </div>
+                <div class="d-flex">
+                  <ul class="f-right__list p-0 m-0">
+                    <li class="f-right__item">
+                      <span>
+                        Fresheness
+                      </span>
+                    </li>
+                    <li class="f-right__item">
+                      <span>
+                        Farm
+                      </span>
+                    </li>
+                    <li class="f-right__item">
+                      <span>
+                        Delivery
+                      </span>
+                    </li>
+                    <li class="f-right__item">
+                      <span>
+                        Stock
+                      </span>
+                    </li>
+                  </ul>
+                  <ul class="f-right__list p-0 m-0">
+                    <li class="f-right__item">
+                      <span>
+                        <span class="f-green">New</span> (Extra fresh)
+                      </span>
+                    </li>
+                    <li class="f-right__item">
+                      <span>
+                        Grocery Tarm Fields
+                      </span>
+                    </li>
+                    <li class="f-right__item">
+                      <span>
+                        Europe
+                      </span>
+                    </li>
+                    <li class="f-right__item">
+                      <span class="f-green">
+                        320 pcs
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="f-right__price col-12 col-sm-6 col-md-3">
+                <span class="bold-text">
+                  36.99 USD
+                </span>
+                <span class="crossed-price">
+                  48.56
+                </span>
+                <span class="free-shipping">
+                  Free Shipping
+                </span>
+                <span class="f-right__day">
+                  Delivery in 1 day
+                </span>
+                <div class="f-right__btn-box d-flex flex-column">
+                  <button type="button" class="btn btn-success d-btn d-flex align-items-center">
+                    Product Detail
+                    <i class='bx bx-chevron-right'></i>
+                  </button>
+                  <button type="button" class="btn btn-light h-btn">
+                    <i class='bx bx-heart'></i>
+                    Add to wish list
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="f-right__wrapper d-flex align-items-center">
+              <div class="f-right__img-box col-12 col-sm-6 col-md-4">
+                <img src="https://picsum.photos/268/280" alt="product">
+              </div>
+              <div class="f-right__content col-md-5">
+                <h3 class="f-right__title">
+                  Product title
+                </h3>
+                <p class="f-right__text">
+                  Space for a small product description
+                </p>
+                <div class="f-right__stars">
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bx-star'></i>
+                </div>
+                <div class="d-flex">
+                  <ul class="f-right__list p-0 m-0">
+                    <li class="f-right__item">
+                      <span>
+                        Fresheness
+                      </span>
+                    </li>
+                    <li class="f-right__item">
+                      <span>
+                        Farm
+                      </span>
+                    </li>
+                    <li class="f-right__item">
+                      <span>
+                        Delivery
+                      </span>
+                    </li>
+                    <li class="f-right__item">
+                      <span>
+                        Stock
+                      </span>
+                    </li>
+                  </ul>
+                  <ul class="f-right__list p-0 m-0">
+                    <li class="f-right__item">
+                      <span>
+                        <span class="f-green">New</span> (Extra fresh)
+                      </span>
+                    </li>
+                    <li class="f-right__item">
+                      <span>
+                        Grocery Tarm Fields
+                      </span>
+                    </li>
+                    <li class="f-right__item">
+                      <span>
+                        Europe
+                      </span>
+                    </li>
+                    <li class="f-right__item">
+                      <span class="f-green">
+                        320 pcs
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="f-right__price col-12 col-sm-6 col-md-3">
+                <span class="bold-text">
+                  36.99 USD
+                </span>
+                <span class="crossed-price">
+                  48.56
+                </span>
+                <span class="free-shipping">
+                  Free Shipping
+                </span>
+                <span class="f-right__day">
+                  Delivery in 1 day
+                </span>
+                <div class="f-right__btn-box d-flex flex-column">
+                  <button type="button" class="btn btn-success d-btn d-flex align-items-center">
+                    Product Detail
+                    <i class='bx bx-chevron-right'></i>
+                  </button>
+                  <button type="button" class="btn btn-light h-btn">
+                    <i class='bx bx-heart'></i>
+                    Add to wish list
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="f-right__wrapper d-flex align-items-center">
+              <div class="f-right__img-box col-12 col-sm-6 col-md-4">
+                <img src="https://picsum.photos/268/280" alt="product">
+              </div>
+              <div class="f-right__content col-md-5">
+                <h3 class="f-right__title">
+                  Product title
+                </h3>
+                <p class="f-right__text">
+                  Space for a small product description
+                </p>
+                <div class="f-right__stars">
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bx-star'></i>
+                </div>
+                <div class="d-flex">
+                  <ul class="f-right__list p-0 m-0">
+                    <li class="f-right__item">
+                      <span>
+                        Fresheness
+                      </span>
+                    </li>
+                    <li class="f-right__item">
+                      <span>
+                        Farm
+                      </span>
+                    </li>
+                    <li class="f-right__item">
+                      <span>
+                        Delivery
+                      </span>
+                    </li>
+                    <li class="f-right__item">
+                      <span>
+                        Stock
+                      </span>
+                    </li>
+                  </ul>
+                  <ul class="f-right__list p-0 m-0">
+                    <li class="f-right__item">
+                      <span>
+                        <span class="f-green">New</span> (Extra fresh)
+                      </span>
+                    </li>
+                    <li class="f-right__item">
+                      <span>
+                        Grocery Tarm Fields
+                      </span>
+                    </li>
+                    <li class="f-right__item">
+                      <span>
+                        Europe
+                      </span>
+                    </li>
+                    <li class="f-right__item">
+                      <span class="f-green">
+                        320 pcs
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="f-right__price col-12 col-sm-6 col-md-3">
+                <span class="bold-text">
+                  36.99 USD
+                </span>
+                <span class="crossed-price">
+                  48.56
+                </span>
+                <span class="free-shipping">
+                  Free Shipping
+                </span>
+                <span class="f-right__day">
+                  Delivery in 1 day
+                </span>
+                <div class="f-right__btn-box d-flex flex-column">
+                  <button type="button" class="btn btn-success d-btn d-flex align-items-center">
+                    Product Detail
+                    <i class='bx bx-chevron-right'></i>
+                  </button>
+                  <button type="button" class="btn btn-light h-btn">
+                    <i class='bx bx-heart'></i>
+                    Add to wish list
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="f-right__wrapper d-flex align-items-center">
+              <div class="f-right__img-box col-12 col-sm-6 col-md-4">
+                <img src="https://picsum.photos/268/280" alt="product">
+              </div>
+              <div class="f-right__content col-md-5">
+                <h3 class="f-right__title">
+                  Product title
+                </h3>
+                <p class="f-right__text">
+                  Space for a small product description
+                </p>
+                <div class="f-right__stars">
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bx-star'></i>
+                </div>
+                <div class="d-flex">
+                  <ul class="f-right__list p-0 m-0">
+                    <li class="f-right__item">
+                      <span>
+                        Fresheness
+                      </span>
+                    </li>
+                    <li class="f-right__item">
+                      <span>
+                        Farm
+                      </span>
+                    </li>
+                    <li class="f-right__item">
+                      <span>
+                        Delivery
+                      </span>
+                    </li>
+                    <li class="f-right__item">
+                      <span>
+                        Stock
+                      </span>
+                    </li>
+                  </ul>
+                  <ul class="f-right__list p-0 m-0">
+                    <li class="f-right__item">
+                      <span>
+                        <span class="f-green">New</span> (Extra fresh)
+                      </span>
+                    </li>
+                    <li class="f-right__item">
+                      <span>
+                        Grocery Tarm Fields
+                      </span>
+                    </li>
+                    <li class="f-right__item">
+                      <span>
+                        Europe
+                      </span>
+                    </li>
+                    <li class="f-right__item">
+                      <span class="f-green">
+                        320 pcs
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="f-right__price col-12 col-sm-6 col-md-3">
+                <span class="bold-text">
+                  36.99 USD
+                </span>
+                <span class="crossed-price">
+                  48.56
+                </span>
+                <span class="free-shipping">
+                  Free Shipping
+                </span>
+                <span class="f-right__day">
+                  Delivery in 1 day
+                </span>
+                <div class="f-right__btn-box d-flex flex-column">
+                  <button type="button" class="btn btn-success d-btn d-flex align-items-center">
+                    Product Detail
+                    <i class='bx bx-chevron-right'></i>
+                  </button>
+                  <button type="button" class="btn btn-light h-btn">
+                    <i class='bx bx-heart'></i>
+                    Add to wish list
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- F-CATEGORY END -->
+    <!-- P-PAGINATION START -->
+
+    <section id="p-page">
+      <div class="container">
+        <div class="p-page d-flex align-items-center justify-content-between">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination p-0 m-0">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div>
+            <button type="button" class="btn btn-success d-flex align-items-center">
+              Show more products
+              <i class='bx bx-chevron-down'></i>
+            </button>
+          </div>
+          <div>
+            <span class="p-page__num">
+              336
+            </span>
+            <span class="p-page__product">
+              Products
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- NAV-LIST START -->
+
+  <section id="nav-list">
+    <div class="container">
+      <div class="nav-list d-flex flex-wrap">
+        <div class="nav-list__wrapper col-12 col-sm-6 col-md-3 col-lg-3">
+          <h3 class="nav-list__title">
+            Get in touch
+          </h3>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Disabled</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-list__wrapper col-12 col-sm-6 col-md-3 col-lg-3">
+          <h3 class="nav-list__title">
+            Get in touch
+          </h3>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Disabled</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-list__wrapper col-12 col-sm-6 col-md-3 col-lg-3">
+          <h3 class="nav-list__title">
+            Get in touch
+          </h3>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Disabled</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-list__wrapper col-12 col-sm-6 col-md-3 col-lg-3">
+          <h3 class="nav-list__title">
+            Get in touch
+          </h3>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Disabled</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NAV-LIST END -->
+  <!-- TAG START -->
+
+  <section id="tag">
+    <div class="container">
+      <div class="tag">
+        <h3 class="tag__title">
+          Product tags
+        </h3>
+        <ul class="tag__list d-flex flex-wrap p-0 m-0">
+          <li class="tag__item"><a href="#" class="tag__link">
+              Beans
+            </a></li>
+          <li class="tag__item"><a href="#" class="tag__link">
+              Carrots
+            </a></li>
+          <li class="tag__item"><a href="#" class="tag__link">
+              Apples
+            </a></li>
+          <li class="tag__item"><a href="#" class="tag__link">
+              Garlic
+            </a></li>
+          <li class="tag__item"><a href="#" class="tag__link">
+              Mushrooms
+            </a></li>
+          <li class="tag__item"><a href="#" class="tag__link">
+              Tomatoes
+            </a></li>
+          <li class="tag__item"><a href="#" class="tag__link">
+              Chilli peppers
+            </a></li>
+          <li class="tag__item"><a href="#" class="tag__link">
+              Broccoli
+            </a></li>
+          <li class="tag__item"><a href="#" class="tag__link">
+              Watermelons
+            </a></li>
+          <li class="tag__item"><a href="#" class="tag__link">
+              Oranges
+            </a></li>
+          <li class="tag__item"><a href="#" class="tag__link">
+              Bananas
+            </a></li>
+          <li class="tag__item"><a href="#" class="tag__link">
+              Grapes
+            </a></li>
+          <li class="tag__item"><a href="#" class="tag__link">
+              Cherries
+            </a></li>
+          <li class="tag__item"><a href="#" class="tag__link">
+              Meat
+            </a></li>
+          <li class="tag__item"><a href="#" class="tag__link">
+              Seo tag
+            </a></li>
+          <li class="tag__item"><a href="#" class="tag__link">
+              Fish
+            </a></li>
+          <li class="tag__item"><a href="#" class="tag__link">
+              Seo tag
+            </a></li>
+          <li class="tag__item"><a href="#" class="tag__link">
+              Fresh food
+            </a></li>
+          <li class="tag__item"><a href="#" class="tag__link">
+              Lemons
+            </a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TAG END -->
+  <!-- FOOTER START -->
+
+  <footer class="site-footer footer">
+    <div class="container">
+      <div class="footer">
+        <p class="footer__text">
+          Copyright © 2020 petrbilek.com
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
